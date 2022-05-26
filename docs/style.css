@@ -333,8 +333,8 @@ button {
 
 .animation-controls {
   position: absolute;
-  width: 17rem;
-  height: 23rem;
+  width: 13rem;
+  height: 25rem;
   -webkit-transform: translate(50%, 80%);
           transform: translate(50%, 80%);
   background: white;
