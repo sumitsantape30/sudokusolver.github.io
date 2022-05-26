@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+      integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    
+    <img src="img.png" alt="YCCE Logo">
+
+    <section class="animation-controls">
+      <!-- <h1>Animation controls</h1> -->
+      <input type="range" class="speed-slider" max="300" min="1" value="200" />
+      <p class="speed">Speed: <span class="speed-number">200</span></p>
+      <p> <b>6th Sem, IT Department, YCCE</b>
+        <br>
+        <br> <b>Subject: DAA </b><br> <br>
+        <b> Guided By: Prof Nisha R Wankhede </b><br> <br>
+        <b>Students Name (Roll No wise): </b> <br> <br>
+        <b>Mohit Urkude(53) </b>, <br> <b>Sanket Lepse(62)</b>, <br> <b>Sumit Santape(66)</b>, <br> <b>Tushar Shende(69)</b>,  <br> <b>Ujjwal Chaudhari(70)</b> <br> 
+      </p>
+     
+    </section>
+    <section class="header">
+      <h1>Sudoku</h1>
+    </section>
+    <section class="controls">
+      <button class="solve"><i class="fas fa-play"></i></button>
+      <button class="generate"><i class="fas fa-sync"></i></button>
+      <div class="cross-container">
+        <div class="cross cross1">
+          <i class="fa fa-times"></i>
+        </div>
+        <div class="cross cross2">
+          <i class="fa fa-times"></i>
+        </div>
+        <div class="cross cross3">
+          <i class="fa fa-times"></i>
+        </div>
+      </div>
+    </section>
+    <!--This board section is filled in the code file attatched to this file-->
+    <section class="board"></section>
+    <section class="auto-solve">
+      <div class="auto-solve-container"></div>
+    </section>
+    <!--You are allowed at most 3 mistakes, if you reach this this section pops up-->
+    <section class="fail-pop-up-container">
+      <div class="fail-pop-up active">
+        <button class="close-fail">X</button>
+        <h1>Nice Try!</h1>
+        <p>
+          You have reached the maximum amount of mistakes and wont</br>  
+          be able to make any more guesses.
+        </p>
+        <p id='fail-question'>Would you like the rest of the board to be solved for you?</p>
+        <button class="solve-button">solve</button>
+      </div>
+    </section>
+    <script src="./app.js"></script>
+  </body>
+</html>
