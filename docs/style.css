@@ -1,0 +1,402 @@
+/*This css was compiled with a sass compiler as I used scss files when coding this project*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background: linear-gradient(135deg, #f1f109 10% 100%);
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  padding: 1rem;
+
+
+}
+
+button {
+  background: none;
+  border: solid #242424 0.1rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.header {
+  width: 100%;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.header h1 {
+  font-size: 4em;
+}
+
+.controls {
+  height: 10vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.controls button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 1rem;
+  margin: 1rem;
+  padding: 0.6rem 1rem;
+  background: #242424;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.controls .cross-container {
+  width: 6rem;
+  margin: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.controls .cross-container .cross {
+  color: #00fff2;
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  display: none;
+}
+
+.board {
+  width: 120%;
+  height: 50rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.board .row {
+  width: 80%;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.board .row .cell {
+  width: 5rem;
+  height: 5rem;
+  border: solid 0.1rem black;
+  cursor: pointer;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.board .row .cell h2 {
+  pointer-events: none;
+  font-size: 3.5rem;
+}
+
+.board .row .cell h3 {
+  pointer-events: none;
+  color: grey;
+  font-size: 2rem;
+  -webkit-transform: translate(70%, 50%);
+          transform: translate(70%, 50%);
+}
+
+.board .row .cell h2::-moz-selection,
+.board .row .cell h3::-moz-selection {
+  color: none;
+  background: none;
+}
+
+.board .row .cell h2::selection,
+.board .row .cell h3::selection {
+  color: none;
+  background: none;
+}
+
+.board .row .selected {
+  background: #f1ff5c !important;
+}
+
+.board .row .good {
+  background-color: lime;
+}
+
+.board .row .bad {
+  background-color: red;
+}
+
+.board .row .transition {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: white;
+}
+
+.board .row2 {
+  margin-bottom: 0.2rem;
+}
+
+.board .row5 {
+  margin-bottom: 0.2rem;
+}
+
+.board .cell:nth-child(3) {
+  margin-right: 0.2rem;
+}
+
+.board .cell:nth-child(6) {
+  margin-right: 0.2rem;
+}
+
+.fail-pop-up-container {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.fail-pop-up-container .fail-pop-up {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2rem;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  min-width: 50%;
+  min-height: 20vh;
+  -webkit-transform: translateY(-2rem);
+          transform: translateY(-2rem);
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.fail-pop-up-container .fail-pop-up .solve-button {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  border: solid 0.1rem #242424;
+  font-size: 1.5rem;
+  color: white;
+  margin: 1rem 2rem;
+  padding: 0.1rem 1.8rem;
+  background: #242424;
+  height: 3rem;
+}
+
+.fail-pop-up-container .fail-pop-up .solve-button:hover {
+  background: white;
+  color: #242424;
+}
+
+.fail-pop-up-container .fail-pop-up #fail-question {
+  margin-top: 1rem;
+}
+
+.fail-pop-up-container .fail-pop-up .close-fail {
+  background-color: #242424;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+}
+
+.fail-pop-up-container.active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.fail-pop-up-container.active .fail-pop-up.active {
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+}
+
+.animation-controls {
+  position: absolute;
+  width: 19rem;
+  height: 23rem;
+  -webkit-transform: translate(50%, 80%);
+          transform: translate(50%, 80%);
+  background: white;
+  border-radius: 0rem;
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2), 0px 20px 40px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2), 0px 20px 40px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+}
+
+.animation-controls h1 {
+  margin-bottom: 1rem;
+}
+
+.animation-controls p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.animation-controls .speed-slider {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  padding: 0.1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  outline: none;
+  width: 100%;
+  position: relative;
+  background: #242424;
+  cursor: pointer;
+  border-radius: 2rem;
+  border: solid 0.05rem #242424;
+}
+
+.animation-controls .speed-slider::-webkit-slider-thumb {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 2rem;
+  background: white;
+  cursor: pointer;
+}
+
+.animation-controls .speed {
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
